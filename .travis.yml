@@ -3,8 +3,12 @@ language: go
 go:
 - 1.11.x
 - 1.12.x
+- tip
 
 script:
   - go fmt $(go list ./... | grep -v /vendor/)
   - go vet $(go list ./... | grep -v /vendor/)
-  - go test -v -race -cover $(go list ./... | grep -v /vendor/)
+  - go test -v -race -coverprofile=coverage.txt -covermode=atomic $(go list ./... | grep -v /vendor/)
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
