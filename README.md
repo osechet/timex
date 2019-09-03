@@ -1,5 +1,9 @@
 # timex - A Go time extension library
 
+[![Build Status](https://www.travis-ci.org/osechet/timex.svg?branch=master)](https://www.travis-ci.org/osechet/timex)
+[![codecov](https://codecov.io/gh/osechet/timex/branch/master/graph/badge.svg)](https://codecov.io/gh/osechet/timex)
+
+
 ## Install
 
 ```
