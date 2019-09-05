@@ -21,7 +21,7 @@ The purpose of the library is to provide several extensions to the standard Go t
 
 ```
 // Display the GPS time of the current time, in microseconds
-fmt.Println(timex.GpsTime(time.Now()).Gps() / time.Microsecond)
+fmt.Println(int64(timex.GpsTime(time.Now()).Gps() / time.Microsecond))
 ```
 
 ## Testing
