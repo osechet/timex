@@ -28,10 +28,7 @@ var leaps []time.Duration
 
 // Called when package is imported.
 func init() {
-	if len(leaps) != 0 {
-		// already initialized
-		return
-	}
+	leaps = make([]time.Duration, 0)
 	previous := 0
 	for i, yearLeaps := range leapSequence {
 		year := leapSecondOrigin + i
