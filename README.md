@@ -1,12 +1,11 @@
 # timex - A Go time extension library
 
-[![Build Status](https://www.travis-ci.org/osechet/timex.svg?branch=master)](https://www.travis-ci.org/osechet/timex)
+[![Build Status](https://github.com/osechet/timex/actions/workflows/go.yml/badge.svg)](https://github.com/osechet/timex/actions)
 [![codecov](https://codecov.io/gh/osechet/timex/branch/master/graph/badge.svg)](https://codecov.io/gh/osechet/timex)
-
 
 ## Install
 
-```
+```sh
 go get github.com/osechet/timex
 ```
 
@@ -16,10 +15,9 @@ The purpose of the library is to provide several extensions to the standard Go t
 
 ## Example
 
-
 ### GPS
 
-```
+```go
 // Display the GPS time of the current time, in microseconds
 fmt.Println(int64(timex.GpsTime(time.Now()).Gps() / time.Microsecond))
 ```
